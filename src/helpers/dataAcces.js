@@ -2,7 +2,7 @@ const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNzc2YWIzOWI3YTY3NjlmM2ZlOTdhMDQ5N2U5NmIxMyIsInN1YiI6IjY0YjVkODBlZTBjYTdmMDEyNTNlN2VmNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZeUoqblXqBkRX6c5Aa40HzyUnzpBxEeWg00-Zl7PxJo'
+    Authorization: import.meta.env.VITE_REACT_TMDB_API_KEY
   }
 };
 export const listarCategorias = async ()=>{
