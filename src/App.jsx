@@ -21,6 +21,25 @@ function App() {
   // const setGes = (g) => setGestion(g);
   // const setPelis = (p) => setPeliculas(p);
 
+  const contexto = {
+    genero,
+    gestion,
+    peliculas,
+    categorias,
+    pagina,
+    totalPaginas,
+    totalResultado,
+    queryBusqueda,
+    setGenero,
+    setGestion,
+    setPeliculas,
+    setCategorias,
+    setPagina,
+    setTotalPaginas,
+    setTotalResultado,
+    setQueryBusqueda,
+  }
+
   useEffect(() => {
     obtenerGeneros();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -33,8 +52,7 @@ function App() {
   }
 
   return (
-    <Context.Provider value={{genero,setGenero,gestion,setGestion,peliculas,setPeliculas,categorias,pagina,setPagina
-    ,totalPaginas,setTotalPaginas,totalResultado,setTotalResultado,queryBusqueda,setQueryBusqueda}}>
+    <Context.Provider value={contexto}>
       <div>
         <Navegador cat={categorias}/>
         <div className='grid-pelis'>
